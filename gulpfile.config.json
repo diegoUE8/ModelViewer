@@ -2,12 +2,12 @@
 	"targets": {
 		"browser": {
 			"compile": [{
-				"input": "src/sass/webvrgulp.scss",
-				"output": "docs/css/webvr.css",
+				"input": "src/css/main.scss",
+				"output": "docs/css/main.css",
 				"minify": false
 			}, {
-				"input": "src/js/webvr.js",
-				"output": "docs/js/webvr.js",
+				"input": "src/js/main.js",
+				"output": "docs/js/main.js",
 				"minify": false
 			}],
 			"bundle": [{
@@ -19,9 +19,8 @@
 					"node_modules/three/examples/js/modifiers/SubdivisionModifier.js",
 					"node_modules/three/examples/js/loaders/MTLLoader.js",
 					"node_modules/three/examples/js/loaders/OBJLoader.js"
-
 				],
-				"output": "docs/js/webvr-vendors.js",
+				"output": "docs/js/vendors.js",
 				"minify": true
 			}]
 		}
@@ -29,7 +28,7 @@
 	"options": {
 		"tfs": false,
 		"server": {
-			"host": "192.168.0.150",
+			"host": "0.0.0.0",
 			"src": "./docs",
 			"port": 45000
 		}
