@@ -10796,12 +10796,13 @@ function () {
       controls.update();
       var pivot = this.pivot = new THREE.Group();
       this.scene.add(pivot);
-      this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'royal_esplanade_1k.hdr', function (envMap) {
+      this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'industrial_pipe_and_valve_02_2k.hdr', function (envMap) {
         _this.render();
 
-        _this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model.gltf', function (model) {
-          pivot.scale.set(0.03, 0.03, 0.03);
-          pivot.position.set(0, -0.5, 0);
+        _this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model2.gltf', function (model) {
+          pivot.scale.set(0.001, 0.001, 0.001);
+          pivot.position.set(0, 0, 0); //-0.5
+
           pivot.add(model);
 
           _this.render();
