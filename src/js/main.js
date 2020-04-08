@@ -54,7 +54,7 @@ class webvr {
 		const pivot = this.pivot = new THREE.Group();
 		this.scene.add(pivot);
 
-		this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'royal_esplanade_1k.hdr', (envMap) => {
+		this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'industrial_pipe_and_valve_02_2k.hdr', (envMap) => {
 			this.render();
 			this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model.gltf', (model) => {
 				pivot.scale.set(0.03, 0.03, 0.03);
@@ -77,7 +77,7 @@ class webvr {
 		loader
 			.setDataType(THREE.UnsignedByteType)
 			.setPath(path)
-			.load(file, function(texture) {
+			.load(file, function (texture) {
 				const envMap = pmremGenerator.fromEquirectangular(texture).texture;
 				scene.background = envMap;
 				scene.environment = envMap;
@@ -94,8 +94,8 @@ class webvr {
 		const renderer = this.renderer;
 		const roughnessMipmapper = new RoughnessMipmapper(renderer); // optional
 		const loader = new GLTFLoader().setPath(path);
-		loader.load(file, function(gltf) {
-			gltf.scene.traverse(function(child) {
+		loader.load(file, function (gltf) {
+			gltf.scene.traverse(function (child) {
 				if (child.isMesh) {
 					roughnessMipmapper.generateMipmaps(child.material);
 				}
