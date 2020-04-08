@@ -56,7 +56,7 @@ class webvr {
 
 		this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'industrial_pipe_and_valve_02_2k.hdr', (envMap) => {
 			this.render();
-			this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model.gltf', (model) => {
+			this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model2.gltf', (model) => {
 				pivot.scale.set(0.03, 0.03, 0.03);
 				pivot.position.set(0, -0.5, 0);
 				pivot.add(model);
