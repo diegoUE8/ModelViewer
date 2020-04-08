@@ -56,7 +56,7 @@ class webvr {
 
 		this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'royal_esplanade_1k.hdr', (envMap) => {
 			this.render();
-			this.loadGltfModel('/ModelViewer/models/gltf/model/glTF/', 'model.gltf', (model) => {
+			this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model.gltf', (model) => {
 				pivot.scale.set(0.03, 0.03, 0.03);
 				pivot.position.set(0, -0.5, 0);
 				pivot.add(model);

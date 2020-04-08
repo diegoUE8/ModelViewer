@@ -10799,7 +10799,7 @@ function () {
       this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'royal_esplanade_1k.hdr', function (envMap) {
         _this.render();
 
-        _this.loadGltfModel('/ModelViewer/models/gltf/model/glTF/', 'model.gltf', function (model) {
+        _this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model.gltf', function (model) {
           pivot.scale.set(0.03, 0.03, 0.03);
           pivot.position.set(0, -0.5, 0);
           pivot.add(model);
