@@ -10796,10 +10796,10 @@ function () {
       controls.update();
       var pivot = this.pivot = new THREE.Group();
       this.scene.add(pivot);
-      this.loadRgbeBackground('textures/equirectangular/', 'royal_esplanade_1k.hdr', function (envMap) {
+      this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'royal_esplanade_1k.hdr', function (envMap) {
         _this.render();
 
-        _this.loadGltfModel('models/gltf/model/glTF/', 'model.gltf', function (model) {
+        _this.loadGltfModel('/ModelViewer/models/gltf/model/glTF/', 'model.gltf', function (model) {
           pivot.scale.set(0.03, 0.03, 0.03);
           pivot.position.set(0, -0.5, 0);
           pivot.add(model);

@@ -30,6 +30,7 @@
 		"server": {
 			"host": "0.0.0.0",
 			"src": "./docs",
+			"path": "/ModelViewer/",
 			"port": 45000
 		}
 	}
